@@ -1,0 +1,31 @@
+Q-difference between copy by value and copy by reference:-
+- : Copy By Value
+In Copy by value the data which variable hold is passed to another variable .
+ Both the variables refers two different memory locations.
+ex:- var a = 20;
+      var b = a ;
+     b = 100;
+console.log(a, b)
+output:- 20, 100
+In the above example,
+For variable named(b) data which is present in the a is copied not value . 
+Even if contents of 'b' are changed original variable value from which it is copied remain same.
+-: Copy by reference
+For composite data types objects are copied by reference. Actual variable and copied variable both
+refer to same memory location . SO change in data of copied variable will lead to change in data of original variable too.
+ex:- var a = [1,2,3]
+         var b =a
+         console.log(a,b)
+output:- [1,2,3] , [1,2,3]
+         b[2]= 100
+       console.log(a,b)
+output:- [1,2,100]   , [1,2,100]
+In the above example we could notice that changing the value of 'b' lead to change of original variable from
+which it is copied as they both refer same memory location.
+
+Q- How to copy by value a composite datatype (array+objects).
+ - There are 3 ways to copy by value for composite data types.
+1.Using the spread (...) operator
+2.Using the Object.assign() method
+3.Using the JSON.stringify() and JSON.parse() methods
+
